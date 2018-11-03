@@ -8,6 +8,7 @@ public class clutterControl : MonoBehaviour {
     public float yBoundSpawn = 7f;
     public float spawnTimer = 1f;
     private float spawnXimer;
+    public float dTimer = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -22,9 +23,15 @@ public class clutterControl : MonoBehaviour {
             spawnClutter();
             spawnXimer = spawnTimer;
         }
+        despawnClutter();
 	}
     void spawnClutter()
     {
         Instantiate(clutter, new Vector3(Random.Range(-xBoundSpawn, xBoundSpawn), Random.Range(-yBoundSpawn, yBoundSpawn), 0f), Quaternion.identity);
+    }
+
+    void despawnClutter()
+    { 
+        Destroy(clutter, dTimer);
     }
 }
