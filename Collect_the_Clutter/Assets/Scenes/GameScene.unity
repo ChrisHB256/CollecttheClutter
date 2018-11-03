@@ -199,11 +199,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4681988873496340, guid: c81285c140620974cae9338f75475380, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.43
       objectReference: {fileID: 0}
     - target: {fileID: 4681988873496340, guid: c81285c140620974cae9338f75475380, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4681988873496340, guid: c81285c140620974cae9338f75475380, type: 2}
       propertyPath: m_LocalPosition.z
@@ -229,35 +229,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 212855026781426840, guid: c81285c140620974cae9338f75475380,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 94b55200fb8bf6a4f8ea9ab141633e4c,
-        type: 3}
-    - target: {fileID: 212855026781426840, guid: c81285c140620974cae9338f75475380,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212855026781426840, guid: c81285c140620974cae9338f75475380,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212855026781426840, guid: c81285c140620974cae9338f75475380,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212855026781426840, guid: c81285c140620974cae9338f75475380,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1014530343456144, guid: c81285c140620974cae9338f75475380, type: 2}
       propertyPath: m_Name
       value: Clutter1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114099193636876550, guid: c81285c140620974cae9338f75475380,
+        type: 2}
+      propertyPath: spawnTimer
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c81285c140620974cae9338f75475380, type: 2}
@@ -272,6 +251,7 @@ GameObject:
   - component: {fileID: 1519708396}
   - component: {fileID: 1519708395}
   - component: {fileID: 1519708394}
+  - component: {fileID: 1519708397}
   m_Layer: 0
   m_Name: TestSprite
   m_TagString: Untagged
@@ -290,10 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6508a39fc8b15064ba429fd2b2a6eaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
   moveVel: 5
   xBound: 7
-  yBound: 7
+  yBound: 5
+  clutterRemove: {fileID: 0}
 --- !u!212 &1519708395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -347,9 +327,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519708393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1519708397
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519708393}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

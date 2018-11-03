@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4681988873496340}
   - component: {fileID: 212855026781426840}
   - component: {fileID: 114099193636876550}
+  - component: {fileID: 68932213544668318}
+  - component: {fileID: 50243888559191484}
   m_Layer: 0
   m_Name: New Prefab
   m_TagString: Untagged
@@ -35,12 +37,57 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014530343456144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -11.43, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50243888559191484
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014530343456144}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!68 &68932213544668318
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014530343456144}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.003786683, y: 0.49738944}
+  - {x: -0.018660545, y: 0.46680987}
+  - {x: -0.042619705, y: 0.42655528}
+  - {x: -0.12515861, y: 0.27989984}
+  - {x: -0.42755198, y: -0.24694562}
+  - {x: 0.0023781061, y: 0.49339378}
+  - {x: 0.21290207, y: 0.13195777}
+  - {x: 0.43173254, y: -0.2476151}
+  - {x: -0.43250728, y: -0.24824977}
+  - {x: 0.4312291, y: -0.247895}
 --- !u!114 &114099193636876550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clutter: {fileID: 1014530343456144}
   xBoundSpawn: 7
-  yBoundSpawn: 5
+  yBoundSpawn: 4.5
   spawnTimer: 1
 --- !u!212 &212855026781426840
 SpriteRenderer:
@@ -91,8 +138,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9141c869c5bbb8645b6290f0f2356afe, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 94b55200fb8bf6a4f8ea9ab141633e4c, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

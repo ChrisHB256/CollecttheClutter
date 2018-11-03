@@ -8,6 +8,7 @@ public class clutterControl : MonoBehaviour {
     public float yBoundSpawn = 7f;
     public float spawnTimer = 1f;
     private float spawnXimer;
+
 	// Use this for initialization
 	void Start () {
         spawnXimer = spawnTimer;

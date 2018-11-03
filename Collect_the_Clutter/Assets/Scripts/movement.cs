@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class movement : MonoBehaviour {
-    public GameObject sprite;
+    
     public float moveVel = 5f;
     public float xBound = 7f;
     public float yBound = 7f;
+    public EdgeCollider2D clutterRemove;
 
 	// Use this for initialization
 	void Start () {
-		
+        //Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -30,5 +31,12 @@ public class movement : MonoBehaviour {
         {
             transform.position += (Vector3.down * Time.deltaTime) * moveVel;
         }
+        OnTriggerEnter2D(clutterRemove);
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+            print("Gotcha");
+            Destroy(other.gameObject);
+    }
 }
