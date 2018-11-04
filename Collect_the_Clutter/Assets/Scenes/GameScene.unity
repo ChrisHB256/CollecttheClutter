@@ -124,8 +124,9 @@ GameObject:
   - component: {fileID: 81529626}
   - component: {fileID: 81529625}
   - component: {fileID: 81529624}
+  - component: {fileID: 81529627}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,8 +148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.425, y: 0.6506765}
   m_AnchorMax: {x: 0.5695249, y: 0.7091618}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 0, y: -2}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81529624
 MonoBehaviour:
@@ -188,7 +189,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 81529625}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 81529627}
+        m_MethodName: reload
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &81529625
@@ -225,6 +237,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81529622}
   m_CullTransparentMesh: 0
+--- !u!114 &81529627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81529622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2344e159d05695c40ae5d6305448a7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &123358802
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,8 +518,9 @@ GameObject:
   - component: {fileID: 643318977}
   - component: {fileID: 643318976}
   - component: {fileID: 643318975}
+  - component: {fileID: 643318978}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +583,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 643318976}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 643318978}
+        m_MethodName: mainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &643318976
@@ -596,6 +631,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643318973}
   m_CullTransparentMesh: 0
+--- !u!114 &643318978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643318973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2344e159d05695c40ae5d6305448a7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884544084
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +988,7 @@ MonoBehaviour:
   clutter: {fileID: 1014530343456144, guid: c81285c140620974cae9338f75475380, type: 2}
   xBoundSpawn: 7
   yBoundSpawn: 5
-  spawnTimer: 1
+  spawnTimer: 0.01
   dTimer: 1.5
 --- !u!4 &2106497162
 Transform:
@@ -951,7 +997,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2106497160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.55, y: 4.34, z: -0.12600261}
+  m_LocalPosition: {x: -9.57, y: 3.37, z: -0.12600261}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
