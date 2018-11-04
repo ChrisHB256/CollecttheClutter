@@ -223,6 +223,7 @@ MonoBehaviour:
   xBound: 7
   yBound: 5
   clutterRemove: {fileID: 0}
+  circleScale: 0.25
 --- !u!212 &1519708395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ MonoBehaviour:
   clutter: {fileID: 1014530343456144, guid: c81285c140620974cae9338f75475380, type: 2}
   xBoundSpawn: 7
   yBoundSpawn: 5
-  spawnTimer: 2
+  spawnTimer: 0.5
   dTimer: 1.5
 --- !u!4 &2106497162
 Transform:

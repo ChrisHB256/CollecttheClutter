@@ -8,6 +8,7 @@ public class movement : MonoBehaviour {
     public float xBound = 7f;
     public float yBound = 7f;
     public EdgeCollider2D clutterRemove;
+    public float circleScale = .25f;
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +37,15 @@ public class movement : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-            print("Gotcha");
-            Destroy(other.gameObject);
+        //print("Gotcha");
+        Destroy(other.gameObject);
+        increaseRadius();
+    }
+
+    void increaseRadius()
+    {
+        CircleCollider2D c = transform.GetComponent<CircleCollider2D>();
+        c.radius += circleScale;
+        c.transform.localScale += new Vector3(circleScale, circleScale, circleScale);
     }
 }
