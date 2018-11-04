@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class clutterControl : MonoBehaviour {
     public GameObject clutter;
-    public float xBoundSpawn = 7f;
-    public float yBoundSpawn = 7f;
+    public float xBoundSpawn;
+    public float yBoundSpawn;
     public float spawnTimer = 1f;
     private float spawnXimer;
     public float dTimer = 5f;
+ 
+    
 
 	// Use this for initialization
 	void Start () {
@@ -17,13 +19,13 @@ public class clutterControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        spawnXimer -= Time.deltaTime;
-        if (spawnXimer <= 0f)
-        {
-            spawnClutter();
-            spawnXimer = spawnTimer;
-        }
-        despawnClutter();
+            spawnXimer -= Time.deltaTime;
+            if (spawnXimer <= 0f)
+            {
+                spawnClutter();
+                spawnXimer = spawnTimer;
+            }
+            despawnClutter();
 	}
     void spawnClutter()
     {
